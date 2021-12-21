@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Circle fill="#d7d4d4" layoutX="466.0" layoutY="152.0" radius="114.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#b2b1b1" layoutX="466.0" layoutY="152.0" radius="58.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Button layoutX="436.0" layoutY="45.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="61.0" style="-fx-background-color: #d7d4d4;" text="🎵">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </Button>
+      <Button fx:id="resetButton" layoutX="436.0" layoutY="220.0" mnemonicParsing="false" onAction="#resetMedia" prefHeight="39.0" prefWidth="61.0" style="-fx-background-color: #d7d4d4;" text="RESET">
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </Button>
+      <Button fx:id="previousButton" graphicTextGap="0.0" layoutX="356.0" layoutY="135.0" minWidth="38.0" mnemonicParsing="false" onAction="#previousMedia" prefHeight="39.0" prefWidth="52.0" style="-fx-background-color: #d7d4d4;" text="⏮" textAlignment="CENTER">
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </Button>
+      <Button fx:id="nextButton" layoutX="526.0" layoutY="135.0" mnemonicParsing="false" onAction="#nextMedia" prefHeight="39.0" prefWidth="52.0" style="-fx-background-color: #d7d4d4;" text="⏭">
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </Button>
+      <Button fx:id="pauseButton" layoutX="444.0" layoutY="124.0" minWidth="34.0" mnemonicParsing="false" onAction="#pauseMedia" prefHeight="24.0" prefWidth="44.0" style="-fx-background-color: #b2b1b1;" text=" ▌▌">
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </Button>
+      <Button fx:id="playButton" layoutX="444.0" layoutY="153.0" minWidth="40.0" mnemonicParsing="false" onAction="#playMedia" prefHeight="25.0" prefWidth="44.0" style="-fx-background-color: #b2b1b1;" text="⏯">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Slider fx:id="volumeSlider" layoutX="356.0" layoutY="280.0" max="100.0" prefHeight="24.0" prefWidth="228.0" value="50.0" />
+      <ImageView fx:id="myImageView" fitHeight="152.0" fitWidth="160.0" layoutX="105.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@LOGOAPP.png" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="songProgressBar" layoutX="14.0" layoutY="286.0" prefHeight="11.0" prefWidth="334.0" progress="0.0" />
+      <Label fx:id="songLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="220.0" prefHeight="65.0" prefWidth="328.0" text="Music Player" textAlignment="CENTER">
+         <font>
+            <Font name="Yu Gothic Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="TOP" layoutX="187.0" layoutY="304.0" prefHeight="39.0" prefWidth="228.0" text="©Desgined By Shajith &amp; Sanjayan" textAlignment="CENTER" />
+      <Button layoutX="559.0" layoutY="14.0" mnemonicParsing="false" onAction="#darkMode" prefHeight="25.0" prefWidth="28.0" text="🌑" />
+   </children>
+</AnchorPane>
